@@ -10,12 +10,15 @@ body {
 
 #header {
     background: white;
-    text-align: center;
     height: 80px;
     width: 100%;
+    border-bottom: 1px solid lightgray;
 }
 
 #header h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -100.19px;
     display: inline;
     line-height: 80px;
 }
@@ -28,7 +31,8 @@ body {
 #board {
     display: inline-block;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
     background: white;
     border: 1px solid lightgray;
+    filter: drop-shadow(0px 0px 6px lightgray);
 }
