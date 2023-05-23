@@ -8,6 +8,13 @@ body {
     min-height: 100vh;
 }
 
+.postit {
+    display: inline-block;
+    background-color: yellow;
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
 #header {
     background: white;
     height: 80px;
