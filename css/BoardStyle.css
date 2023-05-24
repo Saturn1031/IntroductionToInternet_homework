@@ -9,6 +9,7 @@ body {
 }
 
 .postit {
+    position: relative;
     display: inline-block;
     background-color: yellow;
     margin: 10px;

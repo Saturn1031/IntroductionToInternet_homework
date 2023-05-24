@@ -249,7 +249,8 @@
         <p id="answerArea"></p>
         <script>
             $(document).ready(function() {
-                $('#radioButton').click(function(event){  // 이벤트 함수, 완료 버튼을 누르면 계산한 점수를 <p id="answerArea">태그에 출력
+                $('#radioButton').click(function(event){  
+                    // 이벤트 함수, 완료 버튼을 누르면 계산한 점수를 <p id="answerArea">태그에 출력
                     event.preventDefault();
                     $.ajax({
                         url: '../과제/form.php',
