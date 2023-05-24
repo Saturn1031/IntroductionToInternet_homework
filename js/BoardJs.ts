@@ -1,17 +1,22 @@
 $(function(){
-    $("#addPostitButton").on("click", function(){
+    $("#addPostitButton").on("click", function(){  // 이벤트 함수, 포스트잇 객체를 동적으로 생성하고 보드의 자식 노드에 추가하는 함수
         $("#board").append("<div class='postit'><button class='del'><img src='' width='' alt='삭제버튼'></button></div>");
     });
-    $("#board").on("dblclick", ".postit", function(){
+
+    $("#board").on("dblclick", ".postit", function(){  // 이벤트 함수, 포스트잇의 메시지를 수정하는 함수
         let msg :string = prompt("방명록을 입력하세요.");
-        InputMsg(this, msg);
-        // $(this).css("background-color", "blue");
+        let updatedPostit :HTMLElement = editPostitContent(this, msg);
+        $(this).replaceWith(updatedPostit);
     });
 });
 
-function InputMsg(thisPostit :HTMLElement, msg :string){
-    // 메시지 삽입 함수
+function editPostitContent(element: HTMLElement, content: string): HTMLElement {  // pure 함수, 포스트잇의 내용을 업데이트하는 함수
+    let updatedElement = element.cloneNode(true) as HTMLElement; // 요소의 복제본 생성
+    updatedElement.textContent = content; // 복제본의 텍스트 업데이트
+    return updatedElement; // 업데이트된 요소 반환
 }
+
+
 
 
 

@@ -4,12 +4,14 @@ $(function () {
     });
     $("#board").on("dblclick", ".postit", function () {
         var msg = prompt("방명록을 입력하세요.");
-        InputMsg(this, msg);
-        // $(this).css("background-color", "blue");
+        var updatedPostit = editPostitContent(this, msg);
+        $(this).replaceWith(updatedPostit);
     });
 });
-function InputMsg(thisPostit, msg) {
-    // 메시지 삽입 함수
+function editPostitContent(element, content) {
+    var updatedElement = element.cloneNode(true); // 요소의 복제본 생성
+    updatedElement.textContent = content; // 복제본의 텍스트 업데이트
+    return updatedElement; // 업데이트된 요소 반환
 }
 /*
 function AddPostit() { // 이벤트 함수, 포스트잇 객체를 동적으로 생성하는 함수
