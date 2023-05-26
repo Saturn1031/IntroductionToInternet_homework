@@ -9,10 +9,16 @@ body {
 }
 
 .postit {
-    position: relative;
     display: inline-block;
     background-color: yellow;
     margin: 10px;
+    width: 18%;
+    aspect-ratio: 1/1;
+}
+
+.content {
+    position: absolute;
+    display: inline-block;
     width: 18%;
     aspect-ratio: 1/1;
 }
@@ -45,3 +51,4 @@ body {
     border: 1px solid lightgray;
     filter: drop-shadow(0px 0px 6px lightgray);
 }
+
