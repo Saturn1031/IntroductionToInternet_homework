@@ -23,6 +23,7 @@ body {
     aspect-ratio: 1/1;
     word-break:break-word;
     overflow: hidden;
+    user-select: none;
 }
 
 #header {
@@ -30,6 +31,15 @@ body {
     height: 80px;
     width: 100%;
     border-bottom: 1px solid lightgray;
+}
+
+#addPostitButton {
+    margin-top: 30px;
+    margin-left: 3%;
+}
+
+#delPostitButton {
+    margin-left: 3%;
 }
 
 #header h1 {

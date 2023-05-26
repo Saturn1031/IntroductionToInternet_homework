@@ -1,5 +1,5 @@
-$(function(){
-    $("#addPostitButton").on("click", function(){  
+$(() => {
+    $("#addPostitButton").on("click", () => {  
         // 이벤트 함수, 포스트잇 객체를 동적으로 생성하고 보드의 자식 노드에 추가하는 함수
         $("#board").append("<div class='postit'><div class='content'></div></div>");
     });
@@ -9,9 +9,9 @@ $(function(){
         let msg: string | null = prompt("방명록을 입력하세요.");
         let updatedPostit: HTMLElement = editPostitContent(this, msg);
         $(this).replaceWith(updatedPostit);
-      });
+    });
 
-    $("#delPostitButton").on("click", function() {
+    $("#delPostitButton").on("click", () => {
         // 이벤트 함수, 마지막에 생성된 포스트잇 객체를 삭제하는 함수
         let lastPostit: JQuery<HTMLElement> = $(".postit:last");
         lastPostit.remove();
