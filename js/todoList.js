@@ -41,8 +41,9 @@ $(function () {
             dueDate.classList.add('due-date');
             var deleteButton = document.createElement('input');
             deleteButton.setAttribute('type', 'image');
-            deleteButton.setAttribute('src', '');
+            deleteButton.setAttribute('src', '../과제/media/trash.png');
             deleteButton.setAttribute('alt', '삭제');
+            deleteButton.setAttribute('width', '15px');
             deleteButton.addEventListener('click', function () {
                 deleteTask(index);
             });

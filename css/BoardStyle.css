@@ -28,26 +28,32 @@ body {
 
 #header {
     background: white;
-    height: 80px;
+    height: 100px;
     width: 100%;
     border-bottom: 1px solid lightgray;
 }
 
 #addPostitButton {
-    margin-top: 30px;
-    margin-left: 3%;
+    margin-top: 35px;
+    margin-left: 6%;
 }
 
 #delPostitButton {
+    margin-top: 35px;
     margin-left: 3%;
 }
 
 #header h1 {
     position: absolute;
     left: 50%;
-    margin-left: -100.19px;
+    margin-left: -48px;
     display: inline;
     line-height: 80px;
+}
+
+#header p {
+    text-align: center;
+    color: gray;
 }
 
 #bdParent {

@@ -40,6 +40,10 @@ a:visited {
     color: ghostwhite;
 }
 
+footer td {
+    vertical-align: top;
+}
+
 #main {
     background: whitesmoke;
 }
