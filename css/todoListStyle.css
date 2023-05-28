@@ -1,21 +1,20 @@
-
 body {
     width: 700px;
     margin: auto;
     background-color: whitesmoke;
 }
 
+body > div {
+    margin-bottom: 20px;
+}
+
 ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 15px 10px;
     border-bottom: 1px solid LightGray;
 }
 
@@ -29,13 +28,28 @@ form {
 }
 
 input[type="text"] {
-    flex: 1;
+    flex-grow: 1;
     padding: 10px;
     margin-right: 10px;
 }
 
+input[type="image"] {
+    float: right;
+    margin-top: 3px;
+    margin-right: 50px
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+input[type="checkbox"]:not(#incompleteTasksOnly) {
+    float: right;
+}
+
 button {
-    background-color: royalblue ;
+    background-color: royalblue;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -49,6 +63,7 @@ button:hover {
 .due-date {
     font-size: 12px;
     color: gray;
+    margin-left: 15px;
 }
 
 #taskCount {

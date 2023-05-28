@@ -58,16 +58,8 @@ $(function () {
             var listItem = document.createElement('li');
             listItem.innerText = task.title;
             var dueDate = document.createElement('span');
-            dueDate.innerText = "(".concat(task.dueDate, ")");
+            dueDate.innerText = '(' + task.dueDate + ')';
             dueDate.classList.add('due-date');
-            var deleteButton = document.createElement('input');
-            deleteButton.setAttribute('type', 'image');
-            deleteButton.setAttribute('src', '../과제/media/trash.png');
-            deleteButton.setAttribute('alt', '삭제');
-            deleteButton.setAttribute('width', '15px');
-            deleteButton.addEventListener('click', function () {
-                deleteTask(index);
-            });
             var completedCheckbox = document.createElement('input');
             completedCheckbox.setAttribute('type', 'checkbox');
             completedCheckbox.checked = task.completed;
@@ -76,9 +68,17 @@ $(function () {
                 renderTasks();
                 updateIncompleteTaskCount();
             });
+            var deleteButton = document.createElement('input');
+            deleteButton.setAttribute('type', 'image');
+            deleteButton.setAttribute('src', '../과제/media/trash.png');
+            deleteButton.setAttribute('alt', '삭제');
+            deleteButton.setAttribute('width', '15px');
+            deleteButton.addEventListener('click', function () {
+                deleteTask(index);
+            });
             listItem.appendChild(dueDate);
-            listItem.appendChild(deleteButton);
             listItem.appendChild(completedCheckbox);
+            listItem.appendChild(deleteButton);
             taskList.appendChild(listItem);
         });
         // 완료되지 않은 일정 개수 출력
@@ -87,7 +87,7 @@ $(function () {
     function updateIncompleteTaskCount() {
         var filteredTasks = filterTasks(tasks, incompleteTasksOnlyCheckbox.checked);
         var incompleteTaskCount = countIncompleteTasks(filteredTasks);
-        taskCount.innerText = "\uC644\uB8CC\uB418\uC9C0 \uC54A\uC740 \uC77C\uC815: ".concat(incompleteTaskCount);
+        taskCount.innerText = '완료되지 않은 일정: ' + incompleteTaskCount;
     }
     // 폼 제출 이벤트 리스너 등록
     taskForm.addEventListener('submit', function (e) {
