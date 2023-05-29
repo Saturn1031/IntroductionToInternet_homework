@@ -112,8 +112,8 @@ $(() => {
     }
 
     // 이벤트 함수, 추가 버튼 누르면 할 일을 목록에 주가하고 입력란 초기화
-    taskForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // 폼 제출할 때 웹페이지 새로고침 막기
+    taskForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // 폼 제출할 때 웹페이지 새로고침 막기
 
         const title: string = taskInput.value; // 입력된 할 일 가져오기
         const dueDate: string = dueDateInput.value; // 입력된 기한 가져오기
