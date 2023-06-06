@@ -83,7 +83,7 @@ $(() => {
             // <input>요소 만들기 (삭제 버튼)
             const deleteButton = document.createElement('input');
             deleteButton.setAttribute('type', 'image');
-            deleteButton.setAttribute('src', '../과제/media/trash.png');
+            deleteButton.setAttribute('src', './media/trash.png');
             deleteButton.setAttribute('alt', '삭제');
             deleteButton.setAttribute('width', '15px');
 

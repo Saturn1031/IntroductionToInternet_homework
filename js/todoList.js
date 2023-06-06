@@ -72,7 +72,7 @@ $(function () {
             // <input>요소 만들기 (삭제 버튼)
             var deleteButton = document.createElement('input');
             deleteButton.setAttribute('type', 'image');
-            deleteButton.setAttribute('src', '../과제/media/trash.png');
+            deleteButton.setAttribute('src', './media/trash.png');
             deleteButton.setAttribute('alt', '삭제');
             deleteButton.setAttribute('width', '15px');
             // 이벤트 함수, 삭제버튼 클릭하면 해당 인덱스 요소 삭제
